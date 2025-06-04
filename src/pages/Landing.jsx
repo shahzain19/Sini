@@ -15,20 +15,20 @@ const LandingPage = () => {
       {/* Hero Section */}
       <main className="flex flex-col items-center text-center px-6 pt-32 pb-20 mt-8">
         <h1 className="text-5xl md:text-6xl font-bold leading-tight max-w-4xl">
-          Premium Websites That Make You Look Like a Million-Dollar Brand
+          Look Like a Million-Dollar Brand — Without Spending It
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mt-6">
-          We build high-converting, mobile-first websites for startups,
-          creators, and small businesses — ready in just 3 days.
+          Get a high-converting, scroll-stopping website built for your audience
+          — mobile-first, lightning-fast, and live in just 3 days.
         </p>
         <a
           href="#contact"
           className="mt-8 bg-white text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-200 transition"
         >
-          Book Your Website Today
+          Get Started for Just $99
         </a>
         <p className="text-sm text-gray-400 mt-3">
-          Starting at $99 — 100% Satisfaction Guaranteed
+          Book your build now — 100% risk-free with our satisfaction guarantee.
         </p>
       </main>
 
@@ -68,7 +68,7 @@ const LandingPage = () => {
       {/* Our Services Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto bg-[#111111] rounded-lg">
         <h2 className="text-3xl font-semibold text-center mb-12">
-          Our Services
+          What We Build For You
         </h2>
         <div className="grid gap-8 md:grid-cols-3">
           <div className="p-6 rounded-lg border border-zinc-800 flex flex-col items-center text-center">
@@ -77,21 +77,22 @@ const LandingPage = () => {
               Custom Website Design
             </h3>
             <p className="text-gray-400">
-              Tailored websites that reflect your unique brand identity.
+              Tailored sites that look and feel like your brand — not a
+              template.
             </p>
           </div>
           <div className="p-6 rounded-lg border border-zinc-800 flex flex-col items-center text-center">
             <BiCheckCircle className="text-5xl text-blue-400 mb-4" />
             <h3 className="text-xl font-semibold mb-2">E-Commerce Solutions</h3>
             <p className="text-gray-400">
-              Secure and scalable online stores to grow your business.
+              Launch a store that’s sleek, secure, and built to sell.
             </p>
           </div>
           <div className="p-6 rounded-lg border border-zinc-800 flex flex-col items-center text-center">
             <MdVerifiedUser className="text-5xl text-yellow-400 mb-4" />
             <h3 className="text-xl font-semibold mb-2">SEO Optimization</h3>
             <p className="text-gray-400">
-              Boost your search engine rankings and drive more traffic.
+              Show up. Get found. Rank higher with built-in SEO.
             </p>
           </div>
         </div>
@@ -100,34 +101,32 @@ const LandingPage = () => {
       {/* Process Section */}
       <section className="py-20 px-6 bg-[#111111]">
         <h2 className="text-3xl font-semibold text-center mb-12">
-          How It Works
+          From Idea to Launch in 3 Simple Steps
         </h2>
         <div className="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
           <div className="text-center">
             <AiOutlineClockCircle className="text-4xl text-yellow-300 mx-auto mb-4" />
             <h3 className="text-xl font-semibold">1. Book Your Spot</h3>
             <p className="text-gray-400">
-              Submit your request and secure your project slot.
+              Lock in your slot — we only take a limited number per week.
             </p>
           </div>
           <div className="text-center">
             <BsChatDots className="text-4xl text-blue-300 mx-auto mb-4" />
             <h3 className="text-xl font-semibold">2. Share Your Vision</h3>
             <p className="text-gray-400">
-              Tell us about your goals, style, and content needs.
+              We’ll listen, plan, and map out your perfect site.
             </p>
           </div>
           <div className="text-center">
             <BiCheckCircle className="text-4xl text-green-300 mx-auto mb-4" />
             <h3 className="text-xl font-semibold">3. Launch & Grow</h3>
             <p className="text-gray-400">
-              Your website goes live, optimized for conversion.
+              Go live — optimized for traffic, conversions, and speed.
             </p>
           </div>
         </div>
       </section>
-
-
 
       {/* Portfolio / Showcase Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
@@ -232,10 +231,9 @@ const LandingPage = () => {
         id="contact"
         className="bg-[#111111] py-20 px-6 text-center border-t border-gray-800"
       >
-        <h2 className="text-4xl font-bold mb-6">Let’s Build Your Website</h2>
+        <h2 className="text-4xl font-bold mb-6">Ready to Launch?</h2>
         <p className="text-gray-400 mb-8">
-          Get in touch and let us design a stunning online presence that
-          converts visitors into customers.
+          Let’s build something beautiful. Fast. Affordable. Memorable.
         </p>
         <a
           href="mailto:sadshahzain20@gmail.com"
