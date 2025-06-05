@@ -4,26 +4,81 @@ import { BsLightning, BsChatDots } from "react-icons/bs";
 import { BiMobile, BiMoney, BiCheckCircle } from "react-icons/bi";
 import { MdMoney, MdVerifiedUser } from "react-icons/md";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { FaStar } from "react-icons/fa";
+import Aurora from "../components/Aurora";
+import BlobCursor from "../components/BlobCursor";
+
+
+const portfolioItems = [
+  {
+    title: "Cold Mail Pro",
+    description:
+      "A sleek, conversion-focused solution for cold messages and emails to clients.",
+    image: "/ColdMailPro.png",
+  },
+  {
+    title: "OLPT",
+    description:
+      "Create No code websites with ease using our intuitive platform.",
+    image: "/OLPT.png",
+  },
+  {
+    title: "Wikipedia",
+    description:
+      "Clone of the famous Wikipedia, with a focus on user-friendly navigation.",
+    image: "/Rizzapedia.png",
+    link: "https://rizzapedia.vercel.app",
+  },
+  {
+    title: "Resto",
+    description:
+      "A modern restaurant website with online reservation and menu features.",
+    image: "/Resto.png",
+    link: "https://resto-lyart.vercel.app/",
+  },
+  {
+    title: "Photography Portfolio",
+    description:
+      "A modern Photography portfolio showcasing stunning visuals and easy navigation.",
+    image: "/Photography.png",
+    link: "https://photography-t25i.vercel.app/",
+  },
+  {
+    title: "Men Salon",
+    description:
+      "A sleek and modern website for a men’s salon, featuring booking and service details.",
+    image: "/MenSalon.png",
+    link: "https://men-salon-pku2.vercel.app/",
+  },
+];
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-[#111111] text-white">
       {/* Navbar */}
       <Navbar />
-
       {/* Hero Section */}
-      <main className="flex flex-col items-center text-center px-6 pt-32 pb-20 mt-8">
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight max-w-4xl">
+      <main className="relative flex flex-col items-center text-center px-6 pt-32 pb-20  overflow-hidden">
+        {/* Aurora background */}
+        <div className="absolute inset-0">
+          <Aurora
+            colorStops={["#54eb98", "#0fffdb", "#76ff61"]}
+            blend={0.8}
+            amplitude={3}
+            speed={1.3}
+          />
+        </div>
+
+        {/* Main content */}
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight max-w-4xl z-10">
           Look Like a Million-Dollar Brand — Without Spending It
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mt-6">
+        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mt-6 z-10">
           Get a high-converting, scroll-stopping website built for your audience
           — mobile-first, lightning-fast, and live in just 3 days.
         </p>
         <a
           href="#contact"
-          className="mt-8 bg-white text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-200 transition"
+          className="mt-8 bg-white text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-200 transition z-10"
         >
           Get Started for Just $99
         </a>
@@ -31,6 +86,24 @@ const LandingPage = () => {
           Book your build now — 100% risk-free with our satisfaction guarantee.
         </p>
       </main>
+      <BlobCursor
+        blobType="circle"
+        fillColor="#00f0ff"
+        trailCount={3}
+        sizes={[60, 125, 75]}
+        innerSizes={[20, 35, 25]}
+        innerColor="rgba(255,255,255,0.8)"
+        opacities={[0.6, 0.6, 0.6]}
+        shadowColor="rgba(0,0,0,0.75)"
+        shadowBlur={5}
+        shadowOffsetX={10}
+        shadowOffsetY={10}
+        filterStdDeviation={30}
+        useFilter={true}
+        fastDuration={0.1}
+        slowDuration={0.5}
+        zIndex={100}
+      />
 
       {/* Benefits Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
@@ -131,51 +204,27 @@ const LandingPage = () => {
       {/* Portfolio / Showcase Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold text-center mb-12">Our Work</h2>
+
         <div className="grid gap-8 md:grid-cols-3">
-          {/* Portfolio Item */}
-          <div className="rounded-lg overflow-hidden shadow-lg border border-zinc-800 bg-[#111111]">
-            <img
-              src="/ColdMailPro.png"
-              alt="Project 1"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">Cold Mail Pro</h3>
-              <p className="text-gray-400 text-sm">
-                A sleek, conversion-focused solution for cold messages and
-                emails to clients.
-              </p>
+          {portfolioItems.map((item, index) => (
+            <div
+              key={index}
+              className="rounded-lg overflow-hidden shadow-lg border border-zinc-800 bg-[#111111]"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm">{item.description}</p>
+                <a href={item.link} className="text-blue-400 text-sm">
+                  {item.link}
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div className="rounded-lg overflow-hidden shadow-lg border border-zinc-800 bg-[#111111]">
-            <img
-              src="/OLPT.png"
-              alt="Project 2"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">OLPT</h3>
-              <p className="text-gray-400 text-sm">
-                Create No code websites with ease using our intuitive platform.
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-lg overflow-hidden shadow-lg border border-zinc-800 bg-[#111111]">
-            <img
-              src="/Rizzapedia.png"
-              alt="Project 3"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">Wikipedia</h3>
-              <p className="text-gray-400 text-sm">
-                Clone of the famous Wikipedia, with a focus on user-friendly
-                navigation.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -201,6 +250,7 @@ const LandingPage = () => {
 
       {/* FAQ Section */}
       <section className="py-20 px-6 max-w-5xl mx-auto">
+        
         <h2 className="text-3xl font-semibold text-center mb-12">FAQs</h2>
         <div className="space-y-6">
           <div>
