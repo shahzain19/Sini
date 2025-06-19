@@ -26,7 +26,7 @@ const portfolioItems = [
     description:
       "Clone of the famous Wikipedia, with a focus on user-friendly navigation.",
     image: "/Rizzapedia.png",
-    link: "https://rizzapedia.vercel.app",
+    link: "https://dancing-cheesecake-cac9c1.netlify.app/",
   },
   {
     title: "Resto",
