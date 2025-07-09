@@ -1,91 +1,85 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { BsLightning, BsChatDots } from "react-icons/bs";
-import { BiMobile, BiMoney, BiCheckCircle } from "react-icons/bi";
-import { MdMoney, MdVerifiedUser } from "react-icons/md";
+import { BiMobile, BiCodeAlt, BiCheckCircle } from "react-icons/bi";
+import { MdVerifiedUser, MdDesignServices } from "react-icons/md";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import Aurora from "../components/Aurora";
 import BlobCursor from "../components/BlobCursor";
 
-
 const portfolioItems = [
   {
     title: "Cold Mail Pro",
-    description:
-      "A sleek, conversion-focused solution for cold messages and emails to clients.",
+    description: "A sleek, conversion-focused solution for cold emails.",
     image: "/ColdMailPro.png",
   },
   {
+    title: "Library website ~ BearStacks",
+    description: "A cozy, medieval and modern library website. read and write",
+    image: "/Lib.png",
+  },
+  {
     title: "OLPT",
-    description:
-      "Create No code websites with ease using our intuitive platform.",
+    description: "Create no-code websites using a drag-and-drop builder.",
     image: "/OLPT.png",
   },
   {
-    title: "Wikipedia",
-    description:
-      "Clone of the famous Wikipedia, with a focus on user-friendly navigation.",
+    title: "Wikipedia Clone",
+    description: "A fun clone of Wikipedia with clean UI/UX.",
     image: "/Rizzapedia.png",
-    link: "https://rizzapedia.vercel.app",
+    link: "https://dancing-cheesecake-cac9c1.netlify.app/",
   },
   {
     title: "Resto",
-    description:
-      "A modern restaurant website with online reservation and menu features.",
+    description: "A modern restaurant site with reservations and menus.",
     image: "/Resto.png",
     link: "https://resto-lyart.vercel.app/",
   },
   {
     title: "Photography Portfolio",
-    description:
-      "A modern Photography portfolio showcasing stunning visuals and easy navigation.",
+    description: "A sleek photography portfolio with clean navigation.",
     image: "/Photography.png",
     link: "https://photography-t25i.vercel.app/",
   },
   {
     title: "Men Salon",
-    description:
-      "A sleek and modern website for a men’s salon, featuring booking and service details.",
+    description: "A modern site for a men's salon with booking system.",
     image: "/MenSalon.png",
     link: "https://men-salon-pku2.vercel.app/",
+  },
+  {
+    title: "Google Docs Clone",
+    description: "Real-time Google Docs clone with rich text editing.",
+    image: "/Ohionet.png",
+    link: "https://aquamarine-sunflower-1c7780.netlify.app/",
   },
 ];
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-[#111111] text-white">
-      {/* Navbar */}
       <Navbar />
-      {/* Hero Section */}
-      <main className="relative flex flex-col items-center text-center px-6 pt-32 pb-20  overflow-hidden">
-        {/* Aurora background */}
-        <div className="absolute inset-0">
-          <Aurora
-            colorStops={["#54eb98", "#0fffdb", "#76ff61"]}
-            blend={0.8}
-            amplitude={3}
-            speed={1.3}
-          />
-        </div>
 
-        {/* Main content */}
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight max-w-4xl z-10">
-          Look Like a Million-Dollar Brand — Without Spending It
+      {/* Hero Section */}
+      <main className="relative flex flex-col items-center text-center px-6 pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Aurora colorStops={["#54eb98", "#0fffdb", "#76ff61"]} />
+        </div>
+        <h1 className="text-5xl md:text-6xl font-bold max-w-4xl z-10">
+          Hi, I'm Shahzain. I build beautiful, fast websites that convert.
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mt-6 z-10">
-          Get a high-converting, scroll-stopping website built for your audience
-          — mobile-first, lightning-fast, and live in just 3 days.
+          Frontend developer, UI enthusiast, and passionate builder crafting
+          websites that feel good and work better.
         </p>
         <a
           href="#contact"
           className="mt-8 bg-white text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-200 transition z-10"
         >
-          Get Started for Just $99
+          Let's Connect
         </a>
-        <p className="text-sm text-gray-400 mt-3">
-          Book your build now — 100% risk-free with our satisfaction guarantee.
-        </p>
       </main>
+
       <BlobCursor
         blobType="circle"
         fillColor="#00f0ff"
@@ -105,18 +99,16 @@ const LandingPage = () => {
         zIndex={100}
       />
 
-      {/* Benefits Section */}
+      {/* Why Work With Me */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-12">
-          Why Choose Us
-        </h2>
+        <h2 className="text-3xl font-semibold text-center mb-12">Why Work With Me</h2>
         <div className="grid gap-8 md:grid-cols-3">
           <div className="p-6 rounded-lg border border-zinc-800">
             <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-              <BsLightning className="text-yellow-400" /> Super Fast Delivery
+              <BsLightning className="text-yellow-400" /> Fast Delivery
             </h3>
             <p className="text-gray-400">
-              Launch in as little as 3 days with our optimized workflow.
+              Quick turnaround with no compromise on quality.
             </p>
           </div>
           <div className="p-6 rounded-lg border border-zinc-800">
@@ -124,87 +116,51 @@ const LandingPage = () => {
               <BiMobile className="text-blue-400" /> Mobile-First Design
             </h3>
             <p className="text-gray-400">
-              Stunning on any device — phones, tablets, desktops.
+              Responsive and performance-first sites for every screen.
             </p>
           </div>
           <div className="p-6 rounded-lg border border-zinc-800">
             <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-              <BiMoney className="text-green-400" /> Affordable Pricing
+              <BiCheckCircle className="text-green-400" /> Clean Code
             </h3>
             <p className="text-gray-400">
-              Professional design without the agency price tag.
+              Built with modern best practices and readability in mind.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Our Services Section */}
+      {/* What I Do */}
       <section className="py-20 px-6 max-w-6xl mx-auto bg-[#111111] rounded-lg">
-        <h2 className="text-3xl font-semibold text-center mb-12">
-          What We Build For You
-        </h2>
+        <h2 className="text-3xl font-semibold text-center mb-12">What I Do</h2>
         <div className="grid gap-8 md:grid-cols-3">
-          <div className="p-6 rounded-lg border border-zinc-800 flex flex-col items-center text-center">
-            <MdMoney className="text-5xl text-green-400 mb-4" />
-            <h3 className="text-xl font-semibold mb-2">
-              Custom Website Design
-            </h3>
+          <div className="p-6 rounded-lg border border-zinc-800 text-center">
+            <MdDesignServices className="text-5xl text-green-400 mb-4 mx-auto" />
+            <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
             <p className="text-gray-400">
-              Tailored sites that look and feel like your brand — not a
-              template.
+              Interfaces that are both intuitive and visually pleasing.
             </p>
           </div>
-          <div className="p-6 rounded-lg border border-zinc-800 flex flex-col items-center text-center">
-            <BiCheckCircle className="text-5xl text-blue-400 mb-4" />
-            <h3 className="text-xl font-semibold mb-2">E-Commerce Solutions</h3>
+          <div className="p-6 rounded-lg border border-zinc-800 text-center">
+            <BiCodeAlt className="text-5xl text-blue-400 mb-4 mx-auto" />
+            <h3 className="text-xl font-semibold mb-2">Frontend Development</h3>
             <p className="text-gray-400">
-              Launch a store that’s sleek, secure, and built to sell.
+              React, Tailwind, Vite, Next.js — I build with the best.
             </p>
           </div>
-          <div className="p-6 rounded-lg border border-zinc-800 flex flex-col items-center text-center">
-            <MdVerifiedUser className="text-5xl text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold mb-2">SEO Optimization</h3>
+          <div className="p-6 rounded-lg border border-zinc-800 text-center">
+            <MdVerifiedUser className="text-5xl text-yellow-400 mb-4 mx-auto" />
+            <h3 className="text-xl font-semibold mb-2">Performance & SEO</h3>
             <p className="text-gray-400">
-              Show up. Get found. Rank higher with built-in SEO.
+              Optimized sites that load fast and rank well.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 px-6 bg-[#111111]">
-        <h2 className="text-3xl font-semibold text-center mb-12">
-          From Idea to Launch in 3 Simple Steps
-        </h2>
-        <div className="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
-          <div className="text-center">
-            <AiOutlineClockCircle className="text-4xl text-yellow-300 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold">1. Book Your Spot</h3>
-            <p className="text-gray-400">
-              Lock in your slot — we only take a limited number per week.
-            </p>
-          </div>
-          <div className="text-center">
-            <BsChatDots className="text-4xl text-blue-300 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold">2. Share Your Vision</h3>
-            <p className="text-gray-400">
-              We’ll listen, plan, and map out your perfect site.
-            </p>
-          </div>
-          <div className="text-center">
-            <BiCheckCircle className="text-4xl text-green-300 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold">3. Launch & Grow</h3>
-            <p className="text-gray-400">
-              Go live — optimized for traffic, conversions, and speed.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio / Showcase Section */}
+      {/* Projects Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-12">Our Work</h2>
-
+        <h2 className="text-3xl font-semibold text-center mb-12">Projects</h2>
         <div className="grid gap-8 md:grid-cols-3">
           {portfolioItems.map((item, index) => (
             <div
@@ -219,80 +175,35 @@ const LandingPage = () => {
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-400 text-sm">{item.description}</p>
-                <a href={item.link} className="text-blue-400 text-sm">
-                  {item.link}
-                </a>
+                {item.link && (
+                  <a href={item.link} className="text-blue-400 text-sm">
+                    View Live →
+                  </a>
+                )}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="py-16 px-6 bg-[#111111] text-center">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-4xl mx-auto">
-          <div className="flex flex-col items-center">
-            <MdVerifiedUser className="text-4xl text-green-400 mb-2" />
-            <p className="text-xl font-semibold">Money-Back Guarantee</p>
-            <p className="text-gray-400 text-sm">
-              We refund you 100% if you’re not satisfied.
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <BsChatDots className="text-4xl text-blue-400 mb-2" />
-            <p className="text-xl font-semibold">24/7 Support</p>
-            <p className="text-gray-400 text-sm">
-              We’re always here if you need us.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-6 max-w-5xl mx-auto">
-        
-        <h2 className="text-3xl font-semibold text-center mb-12">FAQs</h2>
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold">
-              How long does it take to launch?
-            </h3>
-            <p className="text-gray-400">
-              Typically 3 business days, depending on requirements.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold">Can I request revisions?</h3>
-            <p className="text-gray-400">
-              Yes! We include up to 2 rounds of revisions free of charge.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold">Is hosting included?</h3>
-            <p className="text-gray-400">
-              We help you set up hosting on Netlify, Vercel, or your choice.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA / Contact */}
+      {/* Contact Section */}
       <footer
         id="contact"
         className="bg-[#111111] py-20 px-6 text-center border-t border-gray-800"
       >
-        <h2 className="text-4xl font-bold mb-6">Ready to Launch?</h2>
+        <h2 className="text-4xl font-bold mb-6">Let’s Work Together</h2>
         <p className="text-gray-400 mb-8">
-          Let’s build something beautiful. Fast. Affordable. Memorable.
+          Got a project or idea? I’d love to hear from you.
         </p>
         <a
           href="mailto:sadshahzain20@gmail.com"
           className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition"
         >
-          Contact Us
+          Contact Me
         </a>
         <p className="text-sm text-gray-500 mt-4">
-          or email: <span className="underline">sadshahzain20@gmail.com</span>
+          or email me directly at:{" "}
+          <span className="underline">sadshahzain20@gmail.com</span>
         </p>
       </footer>
     </div>
